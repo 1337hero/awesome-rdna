@@ -1,8 +1,10 @@
 # Awesome RDNA [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
-> Tools, builds, and guides for running LLMs on AMD RDNA GPUs - RDNA 3 (RX 7000), RDNA 3.5 (Strix Halo), RDNA 4 (RX 9000 / R9700).
+> Local AI on AMD GPUs - Radeon AI PRO R9700, RX 7900 XTX, RX 9000 series, and Strix Halo / Gorgon Halo APUs.
 
-Consumer and workstation cards only. `gfx1100` through `gfx1201`. CDNA (MI-series) doesn't belong here.
+New to local AI on AMD? Start here. Most guides assume you're running NVIDIA - this list is for everyone else. Everything below is built by people actually running and tuning on this silicon: patch sets, containers, launch scripts, benchmarks. If it's on this list, someone measured it.
+
+Consumer and workstation RDNA only - `gfx1100` through `gfx1201`. CDNA (MI-series datacenter cards) doesn't belong here.
 
 Want to add something? Read the [contribution guidelines](CONTRIBUTING.md) first.
 
