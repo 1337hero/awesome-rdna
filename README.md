@@ -1,12 +1,10 @@
-# Awesome RDNA
+# Awesome RDNA [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
-[![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
+> Tools, builds, and guides for running LLMs on AMD RDNA GPUs - RDNA 3 (RX 7000), RDNA 3.5 (Strix Halo), RDNA 4 (RX 9000 / R9700).
 
-> Curated tools, builds, and guides for running AI/LLM inference on AMD RDNA GPUs — RDNA 3 (RX 7000), RDNA 3.5 (Strix Point / Strix Halo), and RDNA 4 (RX 9000 / Radeon AI PRO R9700).
+Consumer and workstation cards only. `gfx1100` through `gfx1201`. CDNA (MI-series) doesn't belong here.
 
-Scope is the consumer/workstation RDNA lineage (`gfx1100`, `gfx1150`, `gfx1151`, `gfx1200`, `gfx1201`). Datacenter CDNA (MI-series) is out of scope.
-
-Contributions welcome — see [CONTRIBUTING.md](CONTRIBUTING.md).
+Want to add something? Read the [contribution guidelines](CONTRIBUTING.md) first.
 
 ## Contents
 
@@ -17,23 +15,19 @@ Contributions welcome — see [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## llama.cpp
 
-- [llama-cpp-rdna-boosts](https://github.com/stew675/llama-cpp-rdna-boosts) — Patch set for llama.cpp bringing RDNA-specific performance work: adaptive MTP speculative decoding, WMMA flash attention, BF16 KV, fused MoE and k-quant decode paths, and a hybrid all-reduce for multi-GPU tensor split. Runtime arch selection across RDNA 3/3.5/4, shipped as self-contained `git am` blocks.
+- [llama-cpp-rdna-boosts](https://github.com/stew675/llama-cpp-rdna-boosts) - Performance patches for llama.cpp on RDNA 3/3.5/4. MTP spec decode, WMMA flash attention, BF16 KV, fused MoE, k-quant decode boosts, hybrid all-reduce for multi-GPU tensor split. Ships as 16 `git am` blocks - take all of them or just the ones you want.
 
 ## vLLM
 
-- [Qwen3.6 / Qwen3.8 vLLM launchers for gfx1201](https://github.com/zzpanic/qwen3.6-vllm-gfx1201-launchers) — Tuned standalone launch scripts for serving Qwen 27B dense and 35B-A3B MoE models on a single Radeon AI PRO R9700, with deep measured documentation: KV cache pinning, speculative-decode depth sweeps, and MXFP4-vs-int4 quality benchmarks.
-- [vllm-mxfp4](https://github.com/GGZ14/vllm-mxfp4) — Native MXFP4 W4A8 vLLM stack for the Radeon AI PRO R9700 (gfx1201), packaged as a container with a one-command quickstart, RDNA4-tuned GEMM/attention/all-reduce kernels, and DFlash2/MTP speculative drafting.
-- [vllm-radiance](https://github.com/magiccodingman/vllm-radiance) — Fork of StillDeadcode's vllm-radiance combining a pinned vLLM 0.30 ROCm stack with libr4d's hand-written RDNA4 kernels (R4D attention, gated-delta-net, MXFP4, all-reduce), plus reproducible benchmarks and deployment qualification on dual R9700s.
+- [Qwen3.6 / Qwen3.8 vLLM launchers for gfx1201](https://github.com/zzpanic/qwen3.6-vllm-gfx1201-launchers) - Launch scripts for serving Qwen 27B dense and 35B-A3B on a single R9700. Every knob is measured, not guessed - KV pinning, spec-decode depth sweeps, MXFP4 vs int4 quality numbers. The README tells you what breaks and why.
+- [vllm-mxfp4](https://github.com/GGZ14/vllm-mxfp4) - MXFP4 vLLM for the R9700, in a container. One command gets you a server - no image build, no host ROCm install. Custom gfx1201 GEMM/attention/all-reduce kernels, DFlash2 and MTP spec decode. Fastest vLLM stack on this card.
+- [vllm-radiance](https://github.com/magiccodingman/vllm-radiance) - Codeberg fork of StillDeadcode's vllm-radiance. Pinned vLLM 0.30 plus libr4d's hand-written RDNA4 kernels - R4D attention, gated-delta-net, MXFP4, all-reduce. Qualified on dual R9700s, benchmark runs published.
 
 ## Containers and tooling
 
-- [amd-r9700-vllm-toolboxes](https://github.com/kyuz0/amd-r9700-vllm-toolboxes) — Toolbx/Podman/Distrobox container for serving LLMs with vLLM on R9700 GPUs, with an interactive model launcher, AITER unified-attention integration, and published benchmarks.
-- [amd-strix-halo-toolboxes](https://github.com/kyuz0/amd-strix-halo-toolboxes) — Pre-built llama.cpp containers for Strix Halo (gfx1151) across stable Vulkan and ROCm channels plus experimental forks, with a unified-memory VRAM estimator, distributed-inference tooling, and a cooling/power watchdog.
+- [amd-r9700-vllm-toolboxes](https://github.com/kyuz0/amd-r9700-vllm-toolboxes) - Toolbx/Distrobox container for vLLM on the R9700. Interactive launcher for picking models and backends, AITER unified attention for long context, benchmarks on a GitHub Pages site.
+- [amd-strix-halo-toolboxes](https://github.com/kyuz0/amd-strix-halo-toolboxes) - Prebuilt llama.cpp containers for Strix Halo (gfx1151). Vulkan and ROCm stable channels plus experimental fork builds - strix-llama, EngramHalo, ROCmFPX. Also ships a unified-memory VRAM estimator and cluster distributed inference.
 
 ## Community
 
-- [Launch80 Discord](https://discord.gg/launch80) — Where much of the R9700/RDNA4 vLLM work (radiance, MXFP4 kernels) gets coordinated.
-
-## Contribute
-
-Contributions welcome! Read the [contribution guidelines](CONTRIBUTING.md) first.
+- [Launch80 Discord](https://discord.gg/launch80) - Where the R9700 radiance and MXFP4 work actually gets coordinated. GGZ14 and friends hang out here.
