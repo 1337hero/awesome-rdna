@@ -19,6 +19,8 @@ Want to add something? Read the [contribution guidelines](CONTRIBUTING.md) first
 
 - [llama-cpp-rdna-boosts](https://github.com/stew675/llama-cpp-rdna-boosts) - Performance patches for llama.cpp on RDNA 3/3.5/4. MTP spec decode, WMMA flash attention, BF16 KV, fused MoE, k-quant decode boosts, hybrid all-reduce for multi-GPU tensor split. Ships as 16 `git am` blocks - take all of them or just the ones you want.
 
+- [ROCmFPX](https://github.com/charlie12345/ROCmFPX) - FPX quantization formats for llama.cpp on RDNA4 - ROCmFP4/FP6/FP8, ROCmI4 W4A4. Upstream refuses the tensor layouts, so these weights only run here.
+
 ## vLLM
 
 - [Qwen3.6 / Qwen3.8 vLLM launchers for gfx1201](https://github.com/zzpanic/qwen3.6-vllm-gfx1201-launchers) - Launch scripts for serving Qwen 27B dense and 35B-A3B on a single R9700. Every knob is measured, not guessed - KV pinning, spec-decode depth sweeps, MXFP4 vs int4 quality numbers. The README tells you what breaks and why.
