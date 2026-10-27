@@ -13,6 +13,7 @@ Want to add something? Read the [contribution guidelines](CONTRIBUTING.md) first
 - [llama.cpp](#llamacpp)
 - [vLLM](#vllm)
 - [Containers and tooling](#containers-and-tooling)
+- [Benchmarks and guides](#benchmarks-and-guides)
 - [Community](#community)
 
 ## llama.cpp
@@ -31,6 +32,11 @@ Want to add something? Read the [contribution guidelines](CONTRIBUTING.md) first
 
 - [amd-r9700-vllm-toolboxes](https://github.com/kyuz0/amd-r9700-vllm-toolboxes) - Toolbx/Distrobox container for vLLM on the R9700. Interactive launcher for picking models and backends, AITER unified attention for long context, benchmarks on a GitHub Pages site.
 - [amd-strix-halo-toolboxes](https://github.com/kyuz0/amd-strix-halo-toolboxes) - Prebuilt llama.cpp containers for Strix Halo (gfx1151). Vulkan and ROCm stable channels plus experimental fork builds - strix-llama, EngramHalo, ROCmFPX. Also ships a unified-memory VRAM estimator and cluster distributed inference.
+
+## Benchmarks and guides
+
+- [AMDai Lab Notes](https://amdai.net/lab-log/) - Measured and cited results for local LLMs on 1-2 Radeon AI PRO R9700s (llama.cpp HIP/Vulkan, vLLM TP2, DDR5 MoE offload), failures included, with RSS/JSON feeds.
+- [R9700 ROCm problems tracker](https://amdai.net/rocm-problems/) - Known RDNA4/gfx1201 bugs in ROCm, llama.cpp and vLLM with upstream issue links and workarounds.
 
 ## Community
 
