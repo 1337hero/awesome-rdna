@@ -70,6 +70,8 @@ Want to add something? Read the [contribution guidelines](CONTRIBUTING.md) first
 
 ## Benchmarks and monitoring
 
+- [AMDai Lab Notes](https://amdai.net/lab-log/) - Dated, sourced findings from a 1-2× R9700 desktop: llama.cpp HIP/Vulkan, vLLM TP2, DDR5 MoE offload, failed runs included. Most entries link the upstream PR or release note behind the number.
+
 - [BetterBench](https://github.com/GGZ14/BetterBench) - Percentile-based benchmark for any OpenAI-compatible `/v1` endpoint - vLLM, llama.cpp, SGLang, Ollama, LM Studio. Reports 1% low, median and 99% high for TTFT, inter-token latency and throughput over realistic task categories, with a paired A/B mode built to resolve ~1% differences. Writes a self-contained HTML report beside its JSON.
 
 ## Community
