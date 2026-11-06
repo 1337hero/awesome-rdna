@@ -6,7 +6,7 @@
 - [Name](repo-or-site-url) - Description ending in a period.
 ```
 
-<!-- Which section it goes in: llama.cpp / vLLM / Containers and tooling / Community -->
+<!-- Which section it goes in: llama.cpp / vLLM / Standalone engines / Containers and tooling / Community -->
 
 ## Checklist
 

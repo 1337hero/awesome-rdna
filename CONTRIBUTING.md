@@ -10,7 +10,7 @@ Thanks for helping build the list of AI/LLM inference tooling for AMD RDNA GPUs!
 
 ## How to add an entry
 
-1. Pick the right section (`llama.cpp`, `vLLM`, `Containers and tooling`, `Community`), or propose a new one if nothing fits.
+1. Pick the right section (`llama.cpp`, `vLLM`, `Standalone engines`, `Containers and tooling`, `Community`), or propose a new one if nothing fits.
 2. Add it in alphabetical order within the section, using this exact format:
 
    ```markdown
