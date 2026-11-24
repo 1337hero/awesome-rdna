@@ -1,4 +1,7 @@
+<p align="center"><img src="assets/banner.webp" alt="Awesome RDNA: a felt graphics card with a red wool mascot, local AI on AMD GPUs" width="800"></p>
+
 # Awesome RDNA [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
+
 
 > Local AI on AMD GPUs - Radeon AI PRO R9700, RX 7900 XTX, RX 9000 series, Strix Halo / Gorgon Halo APUs.
 
