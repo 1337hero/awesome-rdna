@@ -14,7 +14,7 @@ Thanks for helping build the list of AI/LLM inference tooling for AMD RDNA GPUs!
 2. Add it in alphabetical order within the section, using this exact format:
 
    ```markdown
-   - [Name](repo-or-site-url) — Description ending in a period.
+   - [Name](repo-or-site-url) - Description ending in a period.
    ```
 
 3. The description should say what it is **and** which hardware it targets. One to two lines, no marketing superlatives ("fastest ever") — measured claims are fine if the linked repo backs them.
