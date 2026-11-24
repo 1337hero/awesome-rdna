@@ -57,6 +57,8 @@ Want to add something? Read the [contribution guidelines](CONTRIBUTING.md) first
 
 ## Standalone engines
 
+- [halogen-flash-server](https://github.com/peonist-ai/halogen-flash-server) - Container image for Qwen3.8-Flash-Next on Strix Halo (`gfx1151`), with HIP kernels written for that one GPU and model family rather than a general runtime. Serves the OpenAI and Anthropic APIs on one port. Decodes 100 tok/s on code and 70 on prose, prefills 1,796 tok/s at 128K, and returns a first token in 1.2 s on a 96K-token agent turn. Also loads an existing llama.cpp GGUF of the model without conversion, and runs small models on the NPU.
+
 - [hipEngine](https://github.com/shisa-ai/hipEngine) - HIP-native inference engine for RDNA3 (`gfx1100`) and Strix Halo (`gfx1151`), written from scratch rather than ported from CUDA. No PyTorch dependency. OpenAI-compatible server with continuous batching, prefix caching, shared KV pool. Custom DMS INT8 KV compression squeezes Qwen3.8-27B Q4_K_M up to 262K context into a 24GB 7900 XTX.
 
 - [radiance](https://codeberg.org/StillDeadcode/radiance) - C++/HIP inference server. Device kernels for RDNA4 (`gfx1200`/`gfx1201`), RDNA3 (`gfx11xx`) and Strix Halo (`gfx1151`), plus an AVX host backend. Serves the OpenAI, Anthropic and llama-server APIs - text, image, video, speech and music. Gemma 4 31B w4a8 decodes 103 tok/s over two R9700s, GLM-5.3-Flash MXFP4 166 tok/s a stream over eight. Its libr4d RDNA4 kernels are the same ones [vllm-radiance](https://github.com/magiccodingman/vllm-radiance) carries.
